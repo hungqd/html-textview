@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">HtmlTextView Example</string>
     <string name="data_binding_activity">View Data Binding Activity</string>
+    <string name="ruby_activity">View Ruby Activity</string>
 </resources>

@@ -16,7 +16,6 @@
 
 package org.sufficientlysecure.htmltextview.example;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
@@ -26,6 +25,7 @@ import android.view.View;
 import android.widget.Toast;
 
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
 
 import org.sufficientlysecure.htmltextview.ClickableTableSpan;
 import org.sufficientlysecure.htmltextview.DrawTableLinkSpan;
@@ -35,7 +35,7 @@ import org.sufficientlysecure.htmltextview.OnClickATagListener;
 
 import static org.sufficientlysecure.htmltextview.example.WebViewActivity.EXTRA_TABLE_HTML;
 
-public class MainActivity extends Activity {
+public class MainActivity extends AppCompatActivity {
 
     // The html table(s) are individually passed through to the ClickableTableSpan implementation
     // presumably for a WebView activity.
@@ -95,6 +95,9 @@ public class MainActivity extends Activity {
     public boolean onOptionsItemSelected(MenuItem item) {
         if (item.getItemId() == R.id.action_view_data_binding) {
             startActivity(new Intent(this, DataBindingExampleActivity.class));
+            return true;
+        } else if (item.getItemId() == R.id.action_view_ruby) {
+            startActivity(new Intent(this, RubyActivity.class));
             return true;
         }
         return super.onOptionsItemSelected(item);
